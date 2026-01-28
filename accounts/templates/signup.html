@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Canteen Signup</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<h2>Smart Canteen Registration</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <p>Username: {{ form.username }}</p>
+    <p>Email: {{ form.email }}</p>
+    <p>Password: {{ form.password }}</p>
+    <p>Register As: {{ form.user_type }}</p>
+
+    <button type="submit">Sign Up</button>
+</form>
+
+</body>
+</html>
